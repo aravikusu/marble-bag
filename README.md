@@ -28,7 +28,11 @@ Code example:
 
 In examples I've used `booleans` as the type. But the type can be anything. Custom classes, dictionaries, strings, more MarbleBags...
 
-The entire idea is to appease our brain. It expects 25% to mean "one in four". This keeps the odds our brains expect.
+```gdscript
+    var rare_loot_table_bag: MarbleBag = MarbleBag.new("Twisted Bow", "500 Magic Logs", "'You did it' sticker")
+    var main_bag: MarbleBag = MarbleBag.new("Attack potion", "Raw chicken", rare_loot_table_bag)
+```
+Create the MarbleBag(s) that suit your needs. Not every games wants a perfect 1/4. Perhaps you want a "if you hit the odds, you get ONE thing, then it resets". Then you can simply call the `reset()` function to reset the bag and begin anew.
 
 Current Version: 1.0.0
 
